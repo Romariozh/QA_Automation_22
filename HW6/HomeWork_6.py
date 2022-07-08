@@ -43,18 +43,17 @@ def cinema_cashier(client_age: int) -> str:
             element += 1
     # checking conditions according to the task + answer for very old people
     if client_age in nice_age:
-        response = 'О, вам ' + str(client_age) + ' ' + string_add_age + '! Який цікавий вік!'
+        response = f'О, вам {str(client_age)} {string_add_age}! Який цікавий вік!'
     elif client_age < 7:
-        response = 'Тобі ж ' + str(client_age) + ' ' + string_add_age + '! Де твої батьки?'
+        response = f'Тобі ж {str(client_age)} {string_add_age}! Де твої батьки?'
     elif client_age < 16:
-        response = 'Тобі лише ' + str(client_age) + ' ' + string_add_age + ', а це фільм для дорослих!'
+        response = f'Тобі лише {str(client_age)} {string_add_age}, а це фільм для дорослих!'
     elif client_age <= 65:
-        response = 'Незважаючи на те що вам ' + str(client_age) + ' ' + string_add_age + ', білетів всеодно нема!'
+        response = f'Незважаючи на те що вам {str(client_age)} {string_add_age}, білетів всеодно нема!'
     elif 65 < client_age < 100:
-        response = 'Вам ' + str(client_age) + ' ' + string_add_age + '? Покажіть пенсійне посвідчення!'
+        response = f'Вам {str(client_age)} {string_add_age}? Покажіть пенсійне посвідчення!'
     else:
-        response = 'Вам ' + str(client_age) + ' ' + \
-                   string_add_age + ', відвідування кінотеатру небезбечно для вашого здоров\'я!'
+        response = f'Вам {str(client_age)} {string_add_age}, відвідування кінотеатру небезбечно для вашого здоров\'я!'
     return response
 
 
